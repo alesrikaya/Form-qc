@@ -2,121 +2,103 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Form QC Fabric Conveyor Belt</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f7f8;
-      color: #333;
-      padding: 40px;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="date"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <h2>Form QC Fabric Conveyor Belt</h2>
-    <form action="https://formspree.io/f/mpwrwlvd" method="POST">
-      <label>Tanggal</label>
-      <input type="date" name="tanggal" required>
+<body class="bg-light">
+  <div class="container my-5">
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">Form QC Fabric Conveyor Belt</h2>
+      <form action="https://formspree.io/f/mpwrwlvd" method="POST">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Tanggal</label>
+            <input type="date" name="tanggal" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Order Number</label>
+            <input type="text" name="ordernumber" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Part Name</label>
+            <input type="text" name="partname" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Pemesan</label>
+            <input type="text" name="namapemesan" class="form-control" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Spesifikasi Conveyor</label>
+            <input type="text" name="spesifikasi" class="form-control" required>
+          </div>
 
-      <label>Order Number</label>
-      <input type="text" name="ordernumber" required>
+          <!-- Optional Fields -->
+          <div class="col-md-4">
+            <label class="form-label">Hardness</label>
+            <input type="text" name="hardness" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Tensile</label>
+            <input type="text" name="ts" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Elongation</label>
+            <input type="text" name="en" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Abrasi</label>
+            <input type="text" name="abrasi" class="form-control">
+          </div>
 
-      <label>Part Name</label>
-      <input type="text" name="partname" required>
+          <div class="col-md-4">
+            <label class="form-label">Bonding 1</label>
+            <input type="text" name="bonding1" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Bonding 2</label>
+            <input type="text" name="bonding2" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Bonding 3</label>
+            <input type="text" name="bonding3" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Bonding 4</label>
+            <input type="text" name="bonding4" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Bonding 5</label>
+            <input type="text" name="bonding5" class="form-control">
+          </div>
 
-      <label>Pemesan</label>
-      <input type="text" name="namapemesan" required>
+          <div class="col-md-4">
+            <label class="form-label">Total Thickness</label>
+            <input type="text" name="totalthickness" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Width</label>
+            <input type="text" name="width" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Length</label>
+            <input type="text" name="length" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Weight</label>
+            <input type="text" name="weight" class="form-control">
+          </div>
 
-      <label>Spesifikasi Conveyor</label>
-      <input type="text" name="spesifikasi" required>
-
-      <label>Hardness</label>
-      <input type="text" name="hardness">
-
-      <label>Tensile</label>
-      <input type="text" name="ts">
-
-      <label>Elongation</label>
-      <input type="text" name="en">
-
-      <label>Abrasi</label>
-      <input type="text" name="abrasi">
-
-      <label>Bonding 1</label>
-      <input type="text" name="bonding1">
-
-      <label>Bonding 2</label>
-      <input type="text" name="bonding2">
-
-      <label>Bonding 3</label>
-      <input type="text" name="bonding3">
-
-      <label>Bonding 4</label>
-      <input type="text" name="bonding4">
-
-      <label>Bonding 5</label>
-      <input type="text" name="bonding5">
-
-      <label>Total Thickness</label>
-      <input type="text" name="totalthickness">
-
-      <label>Width</label>
-      <input type="text" name="width">
-
-      <label>Length</label>
-      <input type="text" name="length">
-
-      <label>Weight</label>
-      <input type="text" name="weight">
-
-      <button type="submit">Kirim Data</button>
-    </form>
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary w-100">Kirim Data</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
